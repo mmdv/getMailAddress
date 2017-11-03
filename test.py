@@ -1,5 +1,38 @@
 import datetime
 
+list1 = [1,2,3,4,8,8]
+list2 = [2,3,5,8,8]
+# list3 = [ i for i in set(list1) if i in set(list2) ]
+print(set(list1) | set(list2))
+# print(list3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 for i in range(3):
     flag = 0
     for x in range(8):

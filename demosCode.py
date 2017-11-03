@@ -78,6 +78,6 @@ if listc.__len__() > 0:
 #方法2:单独list无重复数据
 set1 = set(lista)
 set2 = set(listb)
-data = set1 & set2
+data = set1 & set2   #&取列表交集,  | 取合集   无序
 if data.__len__() > 0:
     print (data)

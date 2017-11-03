@@ -23,11 +23,11 @@ def getAllExcelNames(regex,sourcePath,savePath):
             # 比较数据是否重复
             flag = [i for i in dataPrevious['dataP'] if i in dataPrevious['dataN'] ]
             if flag.__len__() > 0:
-                print('跳过')
-            else:
-                print(dataPrevious['dataN'])
-                #写入表格操作
-                writeExcel(dataPrevious['dataN'],excelPathName,savePath)
+                #利用set去重,取合集,避免遗漏
+                dataPrevious['dataN'] = set(dataPrevious['dataN']) | set(dataPrevious['dataP'])
+                # print(dataPrevious['dataN'])
+            #写入表格操作
+            writeExcel(dataPrevious['dataN'],excelPathName,savePath)
             dataPrevious['dataP'] = dataPrevious['dataN']#后读取数据前存
             parity += 1
             dataPrevious['dataP'] = dataPrevious['dataN']
@@ -107,7 +107,7 @@ def writeExcel(data,currentExcelName,savePath):#data可以不需要而直接写�
         # 30000行数据换一张表
     x = 0#数据列计数
     for i in range(data.__len__()):
-        if i % 300 == 0:
+        if i % 30000 == 0:
             writeCount += 1
             x = 0
             new_workbook = xlwt.Workbook()
