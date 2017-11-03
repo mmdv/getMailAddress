@@ -8,33 +8,47 @@ dataPrevious = {'dataP':[],'dataN':[]}
 parity = 0
 #遍历源数据路径
 def getAllExcelNames(regex,sourcePath,savePath):
-    print(sourcePath,regex)
+    # print(sourcePath,regex)
     global parity
     for parent, dirnames, filenames in os.walk(sourcePath):
+        print('源文件总数',filenames.__len__())
         for filename in filenames:
             if re.match(regex, filename, re.IGNORECASE):
                 excelPathName = os.path.join(parent,filename)#当前文件路径及文件名
-                print('文件路径:', excelPathName)
                 try:
                     dataPrevious['dataN'] = getDataFromExcel(excelPathName)
-                    # print('全部数据',dataPrevious['dataN'])
+                # print('dataN',dataPrevious['dataN'])
                 except Exception as err:
                     print('文件读取出错',err)
+                    # 记录错误信息
+                    f = open(savePath + "errLog.txt","a")
+                    f.write( excelPathName )
+                    f.write("\n")
+                    f.close()
+
             # 比较数据是否重复
-            flag = [i for i in dataPrevious['dataP'] if i in dataPrevious['dataN'] ]
+            # print('dataP',dataPrevious['dataP'])
+            flag = [i for i in dataPrevious['dataN'] if i in dataPrevious['dataP'] ]    #交集
+            #或者 flag = set(dataPrevious['dataN']) & set(dataPrevious['dataP'])
             if flag.__len__() > 0:
-                #利用set去重,取合集,避免遗漏
-                dataPrevious['dataN'] = set(dataPrevious['dataN']) | set(dataPrevious['dataP'])
-                # print(dataPrevious['dataN'])
+                # print('重复-----------------------')
+                # 记录重复文件名:
+                # fw = open(savePath + "repeatLog.txt","a")
+                # fw.write(excelPathName)
+                # fw.write("\n")
+                # fw.close()
+                #利用set,减去交集
+                dataPrevious['dataN'] = dataPrevious['dataN'] - set(flag) # 减去交集
             #写入表格操作
             writeExcel(dataPrevious['dataN'],excelPathName,savePath)
+            dataPrevious['ExcelFile'] = excelPathName  # 存储当前excel名称
             dataPrevious['dataP'] = dataPrevious['dataN']#后读取数据前存
             parity += 1
-            dataPrevious['dataP'] = dataPrevious['dataN']
-#获取数据,返回示例:oneExcelData[[sheet1],[sheet2],,,]
+#获取数据,返回示例:oneExcelData[[sheet1],[sheet2],,,],返回set
 def getDataFromExcel(excelPathName):
     # 读取文件
     dataCurrentExcel = []
+    print('当前文件路径名:', excelPathName)
     excelCurrent = xlrd.open_workbook(excelPathName)
     # 获取当前excel表所有sheet
     all_sheets_list = excelCurrent.sheet_names()
@@ -50,11 +64,13 @@ def getDataFromExcel(excelPathName):
             list = []
             for colCell in sheetCurrent.row_values(0):  # 遍历当前sheet第一行
                 # print('当前表',x,'的第一行',colCell)
-                if re.match('email|e.mail|邮箱', colCell, re.IGNORECASE):  # 如果列表第一行存在email字段栏
-                    # print('含有mail字段列',colCell)
+                if re.match("(.*)email(.*)|(.*)邮箱(.*)|(.*)e(.*)mail(.*)", colCell, re.IGNORECASE):  # 如果列表第一行存在email字段栏
                     temp = sheetCurrent.col_values(i)
-                    while '' in temp:  # 去除列表为空地址
+                    while '' in temp:  # 去除列表为空地址                /////写入邮箱提取
                         temp.remove('')
+                    while re.match("(.*)email(.*)|(.*)邮箱(.*)|(.*)e(.*)mail(.*)",temp[0], re.IGNORECASE):
+                        temp = temp[1:temp.__len__()]#去除第一行email字段
+                    temp = getAllEmail(temp)
                     dataCurrentExcel.extend(temp)
                     flag = True
                     break
@@ -63,7 +79,7 @@ def getDataFromExcel(excelPathName):
                 emailList = checkThreeRows(sheetCurrent)
                 if emailList:
                     dataCurrentExcel.extend(emailList)
-    return dataCurrentExcel
+    return set(dataCurrentExcel)#set去重
 
 # 检测不到email字样,输出前三行,匹配地址邮箱
 def checkThreeRows(sheetCurrent):
@@ -78,7 +94,7 @@ def checkThreeRows(sheetCurrent):
         flag = -1
         for x in sheetCurrent.row_values(i):
             flag +=1#记录出现邮箱列
-            if re.match(regex,x):
+            if re.match(regex,str(x)):
                 sheetHasMail = True
                 break
     if sheetHasMail:
@@ -87,20 +103,20 @@ def checkThreeRows(sheetCurrent):
     else:
         return False
 
-#获取首行包含mail字样列值
+#提取数据中邮箱地址
 def getAllEmail(arg):
     addressList = []
     for i in arg:
-        str = i
+        string = i
         regex = r'([\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+)'
-        result = re.findall(regex,str,re.IGNORECASE)
+        result = re.findall(regex,str(string),re.IGNORECASE)
         for i in range(result.__len__()):
             addressList.append(result[i][0])
     return (addressList)
 
 #写入excel
 def writeExcel(data,currentExcelName,savePath):#data可以不需要而直接写入excel提升效率?
-    # print("写ru数据表被执行",sourceExcelpath)
+    # print("写ru数据表被执行")
     global writeCount
     excelNameCount =  fileCount(savePath) - 1#获取存储文件夹文件数
     # print('获取到文件数',excelNameCount)
@@ -115,7 +131,7 @@ def writeExcel(data,currentExcelName,savePath):#data可以不需要而直接写�
             sheet2 = new_workbook.add_sheet("sheet2")
             sheet2.write(0,0,currentExcelName)
             excelNameCount += 1
-        new_sheet.write(x, 0, data[i])
+        new_sheet.write(x, 0, list(data)[i])
         new_workbook.save(savePath + str(excelNameCount) + ".xls")
         x += 1
 
@@ -124,10 +140,8 @@ def fileCount(savePath):
     for parent, dirnames, filenames in os.walk(savePath):
         # print(parent)
         # print('文件数..................', filenames.__len__())
-        for filename in filenames:
-            print('文件名',filename)
         excelNameCount = filenames.__len__()  # 获取当前文件夹写文件数,继续数目新增命名.xls文件
-    print('存储路径文件夹文件数',excelNameCount)
+    # print('存储路径文件夹文件数',excelNameCount)
     return excelNameCount
 
 if __name__ == "__main__":
