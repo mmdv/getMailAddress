@@ -15,16 +15,16 @@ def getAllExcelNames(regex,sourcePath,savePath):
         for filename in filenames:
             if re.match(regex, filename, re.IGNORECASE):
                 excelPathName = os.path.join(parent,filename)#当前文件路径及文件名
-                try:
-                    dataPrevious['dataN'] = getDataFromExcel(excelPathName)
+                # try:
+                dataPrevious['dataN'] = getDataFromExcel(excelPathName)
                 # print('dataN',dataPrevious['dataN'])
-                except Exception as err:
-                    print('文件读取出错',err)
-                    # 记录错误信息
-                    f = open(savePath + "errLog.txt","a")
-                    f.write( excelPathName )
-                    f.write("\n")
-                    f.close()
+                # except Exception as err:
+                #     print('文件读取出错',err)
+                #     记录错误信息
+                #     f = open(savePath + "errLog.txt","a")
+                #     f.write( excelPathName )
+                #     f.write("\n")
+                #     f.close()
 
             # 比较数据是否重复
             # print('dataP',dataPrevious['dataP'])
@@ -58,23 +58,21 @@ def getDataFromExcel(excelPathName):
         sheetCurrent = excelCurrent.sheet_by_name(x)
         # 判断当前sheet第一行是否含有mail字样
         # print(sheetCurrent.row_values(0))
-        if sheetCurrent.nrows != 0 and sheetCurrent.ncols != 0:
-            i = 0
+        if sheetCurrent.nrows != 0 or sheetCurrent.ncols != 0:
             flag = False
-            list = []
-            for colCell in sheetCurrent.row_values(0):  # 遍历当前sheet第一行
+            for col in range(3):
+                i = 0
+                for colCell in sheetCurrent.row_values(col):  # 遍历当前sheet第一行
                 # print('当前表',x,'的第一行',colCell)
-                if re.match("(.*)email(.*)|(.*)邮箱(.*)|(.*)e(.*)mail(.*)", colCell, re.IGNORECASE):  # 如果列表第一行存在email字段栏
-                    temp = sheetCurrent.col_values(i)
-                    while '' in temp:  # 去除列表为空地址                /////写入邮箱提取
-                        temp.remove('')
-                    while re.match("(.*)email(.*)|(.*)邮箱(.*)|(.*)e(.*)mail(.*)",temp[0], re.IGNORECASE):
-                        temp = temp[1:temp.__len__()]#去除第一行email字段
-                    temp = getAllEmail(temp)
-                    dataCurrentExcel.extend(temp)
-                    flag = True
-                    break
-                i += 1
+                    if re.match("(.*)email(.*)|(.*)邮箱(.*)|(.*)e(.*)mail(.*)", str(colCell), re.IGNORECASE):  # 如果列表第一行存在email字段栏
+                        # print('首行匹配到邮箱地址',i)
+                        temp = sheetCurrent.col_values(i)
+                        # print('temp', temp)
+                        temp = getAllEmail(temp)
+                        dataCurrentExcel.extend(temp)
+                        flag = True
+                        break
+                    i += 1
             if not flag:  # 第一行不存在mail字样,打印全部数据过滤出邮箱
                 emailList = checkThreeRows(sheetCurrent)
                 if emailList:
@@ -105,6 +103,10 @@ def checkThreeRows(sheetCurrent):
 
 #提取数据中邮箱地址
 def getAllEmail(arg):
+    while '' in arg:  # 去除列表为空地址
+        arg.remove('')
+    while re.match("(.*)email(.*)|(.*)邮箱(.*)|(.*)e(.*)mail(.*)", arg[0], re.IGNORECASE):
+        arg = arg[1:arg.__len__()]  # 去除第一行email字段
     addressList = []
     for i in arg:
         string = i
@@ -138,10 +140,8 @@ def writeExcel(data,currentExcelName,savePath):#data可以不需要而直接写�
 # 获取写入目标文件夹的文件数,用于计数命名
 def fileCount(savePath):
     for parent, dirnames, filenames in os.walk(savePath):
-        # print(parent)
         # print('文件数..................', filenames.__len__())
         excelNameCount = filenames.__len__()  # 获取当前文件夹写文件数,继续数目新增命名.xls文件
-    # print('存储路径文件夹文件数',excelNameCount)
     return excelNameCount
 
 if __name__ == "__main__":
