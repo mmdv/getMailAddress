@@ -15,16 +15,16 @@ def getAllExcelNames(regex,sourcePath,savePath):
         for filename in filenames:
             if re.match(regex, filename, re.IGNORECASE):
                 excelPathName = os.path.join(parent,filename)#当前文件路径及文件名
-                # try:
+                try:
                 dataPrevious['dataN'] = getDataFromExcel(excelPathName)
                 # print('dataN',dataPrevious['dataN'])
-                # except Exception as err:
-                #     print('文件读取出错',err)
+                except Exception as err:
+                    print('文件读取出错',err)
                 #     记录错误信息
-                #     f = open(savePath + "errLog.txt","a")
-                #     f.write( excelPathName )
-                #     f.write("\n")
-                #     f.close()
+                    f = open(savePath + "errLog.txt","a")
+                    f.write( excelPathName )
+                    f.write("\n")
+                    f.close()
 
             # 比较数据是否重复
             # print('dataP',dataPrevious['dataP'])
@@ -58,9 +58,13 @@ def getDataFromExcel(excelPathName):
         sheetCurrent = excelCurrent.sheet_by_name(x)
         # 判断当前sheet第一行是否含有mail字样
         # print(sheetCurrent.row_values(0))
-        if sheetCurrent.nrows != 0 or sheetCurrent.ncols != 0:
+        if sheetCurrent.nrows != 0 and sheetCurrent.ncols != 0:
             flag = False
-            for col in range(3):
+            if sheetCurrent.nrows > 10:
+                rows = 10
+            else:
+                rows = sheetCurrent.nrows
+            for col in range(rows):
                 i = 0
                 for colCell in sheetCurrent.row_values(col):  # 遍历当前sheet第一行
                 # print('当前表',x,'的第一行',colCell)
@@ -73,6 +77,8 @@ def getDataFromExcel(excelPathName):
                         flag = True
                         break
                     i += 1
+                if flag:
+                    break
             if not flag:  # 第一行不存在mail字样,打印全部数据过滤出邮箱
                 emailList = checkThreeRows(sheetCurrent)
                 if emailList:
