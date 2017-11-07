@@ -4,7 +4,6 @@ import re
 import datetime
 import pymysql
 
-dataPrevious = {'dataP':[],'dataN':[]}
 #遍历源数据路径
 def getAllExcelNames(regex,sourcePath,savePath):
     # print(sourcePath,regex)
@@ -13,23 +12,18 @@ def getAllExcelNames(regex,sourcePath,savePath):
         for filename in filenames:
             if re.match(regex, filename, re.IGNORECASE):
                 excelPathName = os.path.join(parent,filename)#当前文件路径及文件名
-                try:
-                    dataPrevious['dataN'] = getDataFromExcel(excelPathName)
-                    # print('dataN',dataPrevious['dataN'])
-                except Exception as err:
-                    print('文件读取出错',err)
-                #     记录错误信息
-                    f = open(savePath + "errLog.txt","a")
-                    f.write( excelPathName )
-                    f.write("\n")
-                    f.close()
-
-            #写入数据库
-                opearDb(dataPrevious['dataN'],excelPathName)
-            dataPrevious['ExcelFile'] = excelPathName  # 存储当前excel名称
-            dataPrevious['dataP'] = dataPrevious['dataN']#后读取数据前存
-
-#获取数据,返回示例:oneExcelData[[sheet1],[sheet2],,,],返回set
+                # try:
+                data = getDataFromExcel(excelPathName)
+                    # 写入数据库
+                opearDb(list(data), excelPathName)
+                # except Exception as err:
+                #     print('文件读取出错',err)
+                    #记录错误信息
+                    # f = open(savePath + "errLog.txt","a")
+                    # f.write( excelPathName )
+                    # f.write("\n")
+                    # f.close()
+#获取数据
 def getDataFromExcel(excelPathName):
     # 读取文件
     dataCurrentExcel = []
@@ -111,17 +105,12 @@ def getAllEmail(arg):
 def opearDb(data,filename):
     global writeCount,db,cursor
     writeCount += 1
-
+    print('data',data.__len__())
     for i in data:
-        #利用email索引唯一去重
-        try:
-            sql = "INSERT INTO EMAIL (EMAIL,FILENAME) VALUES ('{}','{}')".format(i,filename)
-            cursor.execute(sql)
-            db.commit()
-        except:
-            # print('数据写入错误')
-            continue
-
+        sql = "insert ignore into email (email,filename) values ('{0}','{1}')".format(str(i), str(filename))
+        cursor.execute(sql)
+        # 提交到数据库执行
+        db.commit()
 # 获取写入目标文件夹的文件数,用于计数命名
 def fileCount(savePath):
     for parent, dirnames, filenames in os.walk(savePath):
@@ -132,11 +121,12 @@ def fileCount(savePath):
 if __name__ == "__main__":
     starttime = datetime.datetime.now()
     #打开数据库
-    db = pymysql.connect("localhost", "root", "", "db3")
+    # db = pymysql.connect("localhost", "root", "", "db3") #加不了编码
+    db = pymysql.connect(host='localhost', port=3306, user='root', passwd='', db='db3', charset="utf8")
     cursor = db.cursor()
     writeCount = 0
     #遍历全部文件
-    getAllExcelNames('(.)+\.xls|\.xlsx',"E:/testExcelData",r"E:/excelAddressAll/")#正则表达式,数据源路径,错误文件存储路径
+    getAllExcelNames('(.)+\.(xls|xlsx)$',"E:/testExcelData",r"E:/excelAddressAll/")#正则表达式,数据源路径,错误文件存储路径
     #关闭数据库
     db.close()
     print('写入表数', writeCount)
