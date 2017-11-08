@@ -5,26 +5,38 @@ import datetime
 import pymysql
 
 #遍历源数据路径
-def getAllExcelNames(regex,sourcePath,savePath):
+def getAllExcelNames(regexXls, regexCsv, sourcePath):
     # print(sourcePath,regex)
     for parent, dirnames, filenames in os.walk(sourcePath):
         # print('源文件总数',filenames.__len__())
         for filename in filenames:
-            if re.match(regex, filename, re.IGNORECASE):
-                excelPathName = os.path.join(parent,filename)#当前文件路径及文件名
-                # try:
-                data = getDataFromExcel(excelPathName)
-                    # 写入数据库
-                opearDb(list(data), excelPathName)
-                # except Exception as err:
-                #     print('文件读取出错',err)
-                    #记录错误信息
-                    # f = open(savePath + "errLog.txt","a")
-                    # f.write( excelPathName )
-                    # f.write("\n")
-                    # f.close()
+            # 匹配.xls/.xlsx
+            if re.match(regexXls, filename, re.IGNORECASE):
+                # print('匹配到xls')
+                execute(parent, filename, getEmailFromExcel)  # 函数名做参数
+            # 匹配csv
+            if re.match(regexCsv, filename, re.IGNORECASE):
+                # print('匹配到csv')
+                execute(parent, filename, getEmailFromCsv)
+
+def execute(parent, filename, fun):
+    excelPathName = os.path.join(parent, filename)  # 当前文件路径及文件名
+    print('匹配到', excelPathName)
+    try:
+        data = fun(excelPathName)
+        # print('dataN',dataPrevious['dataN'])
+        # 写数据库
+        opearDb(data, excelPathName)
+    except Exception as err:
+        print('文件读取出错', err)
+        #     记录错误信息
+        f = open(savePath + "errLog.txt", "a")
+        f.write(excelPathName)
+        f.write("\n")
+        f.close()
+
 #获取数据
-def getDataFromExcel(excelPathName):
+def getEmailFromExcel(excelPathName):
     # 读取文件
     dataCurrentExcel = []
     # print('当前文件路径名:', excelPathName)
@@ -63,6 +75,30 @@ def getDataFromExcel(excelPathName):
                 if emailList:
                     dataCurrentExcel.extend(emailList)
     return set(dataCurrentExcel)#set去重
+
+#获取csv数据
+def getEmailFromCsv(csvfile):
+    with open(csvfile, "r") as csvfile:
+        # 读取csv文件，返回的是迭代类型
+        row = 0  # 前十行寻找
+        reader = csv.reader(csvfile)
+        data = [row for row in reader]  # 现存数据
+        columns = []
+        for i in data:
+            flag = False
+            col = -1
+            row += 1
+            for key in i:
+                col += 1
+                if re.match('.*(mail|邮箱|邮件).*', key, re.IGNORECASE):
+                    flag = True
+                    columns.extend(getAllEmail([r[col] for r in data]))
+                elif re.match("^(')?[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+(')?.*$", key, re.IGNORECASE):
+                    flag = True
+                    columns.extend(getAllEmail([r[col] for r in data]))
+            if row == 10 or (col == (i.__len__() - 1) and flag):
+                break
+    return set(columns)
 
 # 检测不到email字样,输出前三行,匹配地址邮箱
 def checkThreeRows(sheetCurrent):
@@ -126,9 +162,14 @@ if __name__ == "__main__":
     cursor = db.cursor()
     writeCount = 0
     #遍历全部文件
-    getAllExcelNames('(.)+\.(xls|xlsx)$',"E:/testExcelData",r"E:/excelAddressAll/")#正则表达式,数据源路径,错误文件存储路径
+    sourcePath = 'E:/pppsource'
+    savePath = 'E:/pppresult/'
+    regexXls = '(.)+\.(xls|xlsx)$'
+    regexCsv = '.+\.csv$'
+    # 遍历全部文件
+    getAllExcelNames(regexXls, regexCsv, sourcePath)  # 正则表达式,数据源路径,目标路径
     #关闭数据库
     db.close()
-    print('写入表数', writeCount)
+    print('写入次数', writeCount)
     endtime = datetime.datetime.now()
     print('邮件列表获取完成,运行时间:',endtime - starttime)

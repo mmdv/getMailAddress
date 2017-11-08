@@ -114,7 +114,7 @@ def checkThreeRows(sheetCurrent):
 
 #获取csv文件邮箱
 def getEmailFromCsv(csvfile):
-    with open("E:/pppsource\jj.repeat.csv", "r") as csvfile:
+    with open(csvfile, "r") as csvfile:
         # 读取csv文件，返回的是迭代类型
         row = 0  # 前十行寻找
         reader = csv.reader(csvfile)
