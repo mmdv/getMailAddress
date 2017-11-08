@@ -21,6 +21,7 @@ def getAllExcelNames(regexXls,regexCsv,sourcePath):
             if re.match(regexCsv,filename,re.IGNORECASE):
                 # print('匹配到csv')
                 execute(parent,filename,getEmailFromCsv)
+
 #匹配.xls/xlsx/csv后执行函数
 def execute(parent,filename,fun):
     global dataPrevious
