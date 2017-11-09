@@ -1,3 +1,5 @@
+"""从源数据中copy出错误日志中的文件"""
+
 import shutil
 import os
 import os.path
@@ -25,7 +27,7 @@ def getContentFromTxt(txtFile):
             dataList.append(line)
     finally:
         file_object.close()
-    print(dataList)
+    # print(dataList)
     return dataList
 
 if __name__ == "__main__":
