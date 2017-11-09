@@ -13,33 +13,23 @@ import pymysql
 import csv
 
 #遍历源路径,获取全部文件路径名
-def getFullFileNames(sourcePath):
-    # print(sourcePath,regex)
-    fullFileNames = []
+def execute(regexXls,regexCsv,sourcePath):
     for parent, dirnames, filenames in os.walk(sourcePath):
         # print('源文件总数',filenames.__len__())
         for filename in filenames:
-            # 匹配.xls/.xlsx
-            fullFileNames.append(os.path.join(parent, filename))
-    return fullFileNames
-
-#匹配xls,xlsx/csv,对应获取相应数据,写入数据库
-def execute(regexXls,regexCsv,fullFileName):
-
-    datas = []
-
-    #匹配到xls/xlsx
-    if re.match(regexXls, fullFileName, re.IGNORECASE):
-        datas = getEmailFromXls(fullFileName)  # 函数名做参数
-    # 匹配csv
-    elif re.match(regexCsv, fullFileName, re.IGNORECASE):
-        # print('匹配到csv')
-        datas = getEmailFromCsv(fullFileName)
-    if not datas:
-        # 写入数据库
-        insertDb(datas)
-        return
-    return
+            data = []
+            fullFileName = os.path.join(parent, filename)
+            # 匹配xls/xlsx
+            if re.match(regexXls, fullFileName, re.IGNORECASE):
+                data = getEmailFromXls(fullFileName)
+                print('当前执行文件', fullFileName)
+            # 匹配csv
+            elif re.match(regexCsv, fullFileName, re.IGNORECASE):
+                print('当前文件', fullFileName)
+                data = getEmailFromCsv(fullFileName)
+            if data:
+                # 写入数据库
+                insertDb(data)
 
 #获取xls/xlsx数据
 def getEmailFromXls(xlsFile):
@@ -102,7 +92,7 @@ def insertDb(data):
     db = pymysql.connect(host='localhost', port=3306, user='root', passwd='', db='db3', charset="utf8")
     cursor = db.cursor()
     insertCount += 1
-    print('data',data.__len__())
+    # print('data',data.__len__())
     try:
         # sql = "INSERT IGNORE INTO EMAILFROMSIMON (EMAIL) VALUES ( %s )"
         sql = "INSERT IGNORE INTO " + dbTable + " (EMAIL) VALUES ( %s )"
@@ -115,19 +105,16 @@ def insertDb(data):
     db.close()
 
 if __name__ == "__main__":
+    #写入的数据表名
     dbTable = "EMAILFROMSIMON2"
     starttime = datetime.datetime.now()
-    #打开数据库
     insertCount = 0
-    sourcePath = 'E:/pppsource'
+    sourcePath = 'E:/Simon 数据/'
     savePath = 'E:/pppresult/'
     regexXls = '(.)+\.(xls|xlsx)$'
     regexCsv = '.+\.csv$'
-    # 获取源路径文件名
-    fullFileNames = getFullFileNames(sourcePath)
-    #遍历文件获取数据
-    for fileName in fullFileNames:
-        execute(regexXls,regexCsv,fileName)
+    # 执行函数
+    execute(regexXls, regexCsv, sourcePath)
     print('写入次数', insertCount)
     endtime = datetime.datetime.now()
     print('运行时间:',endtime - starttime)
