@@ -1,8 +1,11 @@
+"""直接读取写入数据库,匹配10行mail字样或者三行email地址不完全"""
+
 import os
 import xlrd
 import re
 import datetime
 import pymysql
+import csv
 
 #遍历源数据路径
 def getAllExcelNames(regexXls, regexCsv, sourcePath):
@@ -142,11 +145,14 @@ def opearDb(data,filename):
     global writeCount,db,cursor
     writeCount += 1
     print('data',data.__len__())
-    for i in data:
-        sql = "insert ignore into email (email,filename) values ('{0}','{1}')".format(str(i), str(filename))
-        cursor.execute(sql)
+    try:
+        sql = "INSERT IGNORE INTO EMAILFROMSIMON (EMAIL) VALUES ( %s )"
+        # sql = "INSERT IGNORE INTO EMAIL (EMAIL) VALUES ( %s )"
+        cursor.executemany(sql,tuple(data))
         # 提交到数据库执行
         db.commit()
+    except Exception as  err:
+        print('写入错误',err)
 # 获取写入目标文件夹的文件数,用于计数命名
 def fileCount(savePath):
     for parent, dirnames, filenames in os.walk(savePath):
