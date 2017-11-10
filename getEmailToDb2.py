@@ -134,14 +134,13 @@ def getAllEmail(arg):
         arg.remove('')
     while re.match("(.*)email(.*)|(.*)邮箱(.*)|(.*)e(.*)mail(.*)", arg[0], re.IGNORECASE):
         arg = arg[1:arg.__len__()]  # 去除第一行email字段
-    addressList = []
-    for i in arg:
-        string = i
-        regex = r'([\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+)'
-        result = re.findall(regex,str(string),re.IGNORECASE)
-        for i in range(result.__len__()):
-            addressList.append(result[i][0])
-    return (addressList)
+        emailList = []
+    for cell in arg:
+        regex = '([a-zA-Z0-9][a-zA-Z0-9.\-\_+]+@([a-zA-Z0-9]+[\-_\.+]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3})'  # 匹配完全
+        result = re.findall(regex, str(cell), re.IGNORECASE)
+        for i in result:
+            emailList.append(i[0])
+    return (emailList)
 
 #连接数据库
 def opearDb(data,filename):
@@ -149,7 +148,7 @@ def opearDb(data,filename):
     writeCount += 1
     print('data',data.__len__())
     try:
-        sql = "INSERT IGNORE INTO EMAILFROMSIMON (EMAIL) VALUES ( %s )"
+        sql = "INSERT IGNORE INTO " + dbTable + " (EMAIL) VALUES ( %s )"
         # sql = "INSERT IGNORE INTO EMAIL (EMAIL) VALUES ( %s )"
         cursor.executemany(sql,tuple(data))
         # 提交到数据库执行
@@ -164,6 +163,7 @@ def fileCount(savePath):
     return excelNameCount
 
 if __name__ == "__main__":
+    dbTable = " EMAILTEST"
     starttime = datetime.datetime.now()
     #打开数据库
     # db = pymysql.connect("localhost", "root", "", "db3") #加不了编码
@@ -171,7 +171,8 @@ if __name__ == "__main__":
     cursor = db.cursor()
     writeCount = 0
     #遍历全部文件
-    sourcePath = 'E:/pppsource'
+    # sourcePath = 'E:/pppsource'
+    sourcePath = 'E:/py48src/'
     savePath = 'E:/pppresult/'
     regexXls = '(.)+\.(xls|xlsx)$'
     regexCsv = '.+\.csv$'

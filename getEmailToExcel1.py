@@ -145,16 +145,15 @@ def getEmailFromCsv(csvfile):
 def getAllEmail(arg):
     while '' in arg:  # 去除列表为空地址
         arg.remove('')
-    while re.match("(.*)email(.*)|.*(邮箱|邮件).*|(.*)e(.*)mail(.*)", arg[0], re.IGNORECASE):
+    while re.match("(.*)email(.*)|(.*)邮箱(.*)|(.*)e(.*)mail(.*)", arg[0], re.IGNORECASE):
         arg = arg[1:arg.__len__()]  # 去除第一行email字段
-    addressList = []
-    for i in arg:
-        string = i
-        regex = r'([\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+)'
-        result = re.findall(regex,str(string),re.IGNORECASE)
-        for i in range(result.__len__()):
-            addressList.append(result[i][0])
-    return (addressList)
+        emailList = []
+    for cell in arg:
+        regex = '([a-zA-Z0-9][a-zA-Z0-9.\-\_+]+@([a-zA-Z0-9]+[\-_\.+]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3})'  # 匹配完全
+        result = re.findall(regex, str(cell), re.IGNORECASE)
+        for i in result:
+            emailList.append(i[0])
+    return (emailList)
 
 #写入excel
 def writeExcel(data,currentExcelName,savePath):#data可以不需要而直接写入excel提升效率?

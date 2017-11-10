@@ -53,7 +53,7 @@ def getEmailFromXls(xlsFile):
     except Exception as err:
 
         f = open(savePath + "errLog2.txt", "a")
-        f.write(xlsFile)
+        f.write(str(xlsFile))
         f.write("\n")
         f.close()
 
@@ -71,7 +71,7 @@ def getEmailFromCsv(csvFile):
     except Exception as err:
         #     记录读取错误文件
         f = open(savePath + "errLog2.txt", "a")
-        f.write(csvFile)
+        f.write(str(csvFile))
         f.write("\n")
         f.close()
 
@@ -80,16 +80,16 @@ def getEmails(arg):
     emailList = []
     #将每个数据作为字符串,findall邮箱
     for cell in arg:
-        regex = r'([\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+)'
+        regex = '([a-zA-Z0-9][a-zA-Z0-9.\-\_+]+@([a-zA-Z0-9]+[\-_\.+]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3})'  # 匹配完全
         result = re.findall(regex,str(cell),re.IGNORECASE)
-        for i in range(result.__len__()):
-            emailList.append(result[i][0])
+        for i in  result:
+            emailList.append(i[0])
     return (emailList)
 
 #写入数据库
 def insertDb(data):
     global insertCount,dbTable
-    db = pymysql.connect(host='localhost', port=3306, user='root', passwd='', db='db3', charset="utf8")
+    db = pymysql.connect(host='localhost', port=3306, user='root', passwd='', db='db3', charset='utf8')
     cursor = db.cursor()
     insertCount += 1
     # print('data',data.__len__())
@@ -106,10 +106,11 @@ def insertDb(data):
 
 if __name__ == "__main__":
     #写入的数据表名
-    dbTable = "EMAILFROMSIMON2"
+    dbTable = " EMAILFROMSIMON"
     starttime = datetime.datetime.now()
     insertCount = 0
     sourcePath = 'E:/Simon 数据/'
+    # sourcePath = 'E:/pppsource/'
     savePath = 'E:/pppresult/'
     regexXls = '(.)+\.(xls|xlsx)$'
     regexCsv = '.+\.csv$'

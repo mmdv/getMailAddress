@@ -46,13 +46,14 @@ def getEmailFromExcel(excelPathName):
     return dataCurrentExcel
 #写入数据库db3,emailonly表
 def insertDb(data):
+    global dbTable
     db = pymysql.connect(host='localhost', port=3306, user='root', passwd='', db='db3', charset="utf8")
     cursor = db.cursor()
     """效率很低
     sql = "insert ignore into EMAILFROMSIMON (email) values ('{0}')".format(str(i))
     cursor.execute(sql)"""
     try:
-        sql = "INSERT IGNORE INTO EMAILFROMSIMON (EMAIL) VALUES ( %s )"
+        sql = "INSERT IGNORE INTO " + dbTable + " (EMAIL) VALUES ( %s )"
         cursor.executemany(sql,tuple(data))
         # 提交到数据库执行
         db.commit()
@@ -82,7 +83,6 @@ def fileCount(savePath):
 
 #写入excel,48000一份
 def writeExcel(data,savePath):
-        # 30000行数据换一张表
     fileCou = fileCount(savePath) - 1
     x = 0#数据列计数
     for i in range(data.__len__()):
@@ -96,6 +96,7 @@ def writeExcel(data,savePath):
         x += 1
 
 if __name__ == "__main__":
+    dbTable = "EMAILTEST"
     starttime = datetime.datetime.now()
     sourcePath = "E:/py48src/"
     savaPath = "E:/py48res/"
