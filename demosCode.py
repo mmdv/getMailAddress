@@ -185,3 +185,19 @@ def openFile():
 
     for chunk in read_file_by_chunks('d:/data.txt', 4):
         print(chunk)
+
+#11简单的pandas示例
+import pandas as pd
+def leaPandas():
+    writer = pd.ExcelWriter('E:/output.xlsx')
+    df = pd.DataFrame(data={'col1':[1,1], 'col2':[2,2]})
+    df.to_excel(writer, sheet_name='sheet1')
+    writer.save()
+    print('\n\n写入excel成功~~')
+
+#listwhile操作 去除空值
+def fun12(arg):
+    while '' in arg:  # 去除列表为空地址
+        arg.remove('')
+    while re.match("(.*)email(.*)|(.*)邮箱(.*)|(.*)e(.*)mail(.*)", arg[0], re.IGNORECASE):
+        arg = arg[1:arg.__len__()]  # 去除第一行email字段

@@ -24,7 +24,8 @@ print(result.__len__())
 # print(dat)
 
 
-rs = []
+rs = [[]]
 
 if not rs:
     print(999999)
+
