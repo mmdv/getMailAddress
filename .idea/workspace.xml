@@ -13,95 +13,72 @@
     <SUITE FILE_PATH="coverage/getMailAddress$getEmailToDb2.coverage" NAME="getEmailToDb2 Coverage Results" MODIFIED="1510297731057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/getMailAddress$cutEmail.coverage" NAME="cutEmail Coverage Results" MODIFIED="1510196132352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/getMailAddress$getEmailFromResult3.coverage" NAME="getEmailFromResult3 Coverage Results" MODIFIED="1510297905778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/getMailAddress$dbToCSV8.coverage" NAME="dbToCSV8 Coverage Results" MODIFIED="1510809559776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/getMailAddress$getEmailToExcel.coverage" NAME="getEmailToExcel Coverage Results" MODIFIED="1510216023789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/getMailAddress$DbToopenpyxl7.coverage" NAME="DbToopenpyxl7 Coverage Results" MODIFIED="1510311168305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/getMailAddress$pyMysql.coverage" NAME="pyMysql Coverage Results" MODIFIED="1510197216639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/getMailAddress$DbToopenpyxl7.coverage" NAME="DbToopenpyxl7 Coverage Results" MODIFIED="1510630877393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/getMailAddress$pyMysql.coverage" NAME="pyMysql Coverage Results" MODIFIED="1510579990868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/getMailAddress$cunEmailMany.coverage" NAME="cunEmailMany Coverage Results" MODIFIED="1510210368752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/getMailAddress$getEmailFromExcel2.coverage" NAME="getEmailFromExcel2 Coverage Results" MODIFIED="1510221459183" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/getMailAddress$fromDbtoExcel6.coverage" NAME="fromDbtoExcel6 Coverage Results" MODIFIED="1510302180228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/getMailAddress$test0.coverage" NAME="test0 Coverage Results" MODIFIED="1510308380759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/getMailAddress$test0.coverage" NAME="test0 Coverage Results" MODIFIED="1510720063718" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/getMailAddress$copyFile.coverage" NAME="copyFile Coverage Results" MODIFIED="1510211687596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/getMailAddress$getEmailAdress.coverage" NAME="getEmailAdress Coverage Results" MODIFIED="1510033084049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/getMailAddress$getEmailAddressToDb.coverage" NAME="getEmailAddressToDb Coverage Results" MODIFIED="1510210618441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/getMailAddress$getEmailFromExcel4.coverage" NAME="getEmailFromExcel4 Coverage Results" MODIFIED="1510294069546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/getMailAddress$getEmailFromExcel4.coverage" NAME="getEmailFromExcel4 Coverage Results" MODIFIED="1510561658102" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/getMailAddress$DbToExcel7_1.coverage" NAME="DbToExcel7.1 Coverage Results" MODIFIED="1510720208879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/getMailAddress$basics.coverage" NAME="basics Coverage Results" MODIFIED="1510113369572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/getMailAddress$test.coverage" NAME="test Coverage Results" MODIFIED="1510307692765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/getMailAddress$deleteFromDb8.coverage" NAME="deleteFromDb8 Coverage Results" MODIFIED="1510622859821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/getMailAddress$test.coverage" NAME="test Coverage Results" MODIFIED="1510810482183" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/getMailAddress$selectFromDb5.coverage" NAME="selectFromDb5 Coverage Results" MODIFIED="1510292914905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/getMailAddress$fromDbToDb5.coverage" NAME="fromDbToDb5 Coverage Results" MODIFIED="1510296175024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/getMailAddress$fromDbToDb5.coverage" NAME="fromDbToDb5 Coverage Results" MODIFIED="1510561713628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/getMailAddress$testCSV.coverage" NAME="testCSV Coverage Results" MODIFIED="1510804374669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.py">
+      <file leaf-file-name="testCSV.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testCSV.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state relative-caret-position="297">
+              <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fromDbtoExcel6.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fromDbtoExcel6.py">
+      <file leaf-file-name="fromDbToDb5.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fromDbToDb5.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1399">
-              <caret line="71" column="11" lean-forward="true" selection-start-line="71" selection-start-column="11" selection-end-line="71" selection-end-column="11" />
+            <state relative-caret-position="378">
+              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding>
-                <element signature="e#33#44#0" expanded="true" />
-                <element signature="e#132#543#0" expanded="false" />
-                <element signature="e#578#738#0" expanded="false" />
+                <element signature="e#39#54#0" expanded="true" />
+                <element signature="e#116#527#0" expanded="false" />
+                <element signature="e#562#722#0" expanded="false" />
+                <element signature="e#755#1158#0" expanded="false" />
+                <marker date="1510561709629" expanded="true" signature="290:324" ph="SELECT EMAIL... EMAILFROMSIMON2" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test0.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test0.py">
+      <file leaf-file-name="getEmailFromExcel4.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/getEmailFromExcel4.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="26" />
+            <state relative-caret-position="447">
+              <caret line="75" column="17" lean-forward="true" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DbToopenpyxl7.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DbToopenpyxl7.py">
+      <file leaf-file-name="DbToExcel7.1.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DbToExcel7.1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="49" column="14" lean-forward="true" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
+            <state relative-caret-position="157">
+              <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="68" selection-end-column="84" />
               <folding>
-                <element signature="e#33#44#0" expanded="true" />
-                <element signature="e#162#573#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getEmailToDb2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/getEmailToDb2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="136" column="9" lean-forward="false" selection-start-line="136" selection-start-column="9" selection-end-line="136" selection-end-column="9" />
-              <folding>
-                <element signature="e#3787#4338#0" expanded="false" />
-                <element signature="e#5324#5540#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getEmailToExcel1.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/getEmailToExcel1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="176" column="14" lean-forward="false" selection-start-line="157" selection-start-column="0" selection-end-line="183" selection-end-column="25" />
-              <folding>
-                <element signature="e#68#77#0" expanded="true" />
-                <element signature="e#3479#4030#0" expanded="false" />
-                <element signature="e#4075#4911#0" expanded="false" />
-                <element signature="e#5527#6173#0" expanded="false" />
-                <element signature="e#6225#6441#0" expanded="false" />
+                <element signature="e#54#65#0" expanded="true" />
+                <element signature="e#1492#1705#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -110,12 +87,33 @@
       <file leaf-file-name="demosCode.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demosCode.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="198" column="13" lean-forward="false" selection-start-line="198" selection-start-column="13" selection-end-line="198" selection-end-column="13" />
+            <state relative-caret-position="-140">
+              <caret line="228" column="12" lean-forward="true" selection-start-line="228" selection-start-column="12" selection-end-line="228" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test0.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test0.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding>
-                <element signature="e#701#1203#0" expanded="false" />
-                <element signature="e#2867#3703#0" expanded="false" />
+                <element signature="e#0#21#0" expanded="true" />
+                <element signature="e#59#255#0" expanded="false" />
+                <element signature="e#305#882#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="10" column="104" lean-forward="true" selection-start-line="10" selection-start-column="104" selection-end-line="10" selection-end-column="104" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -131,10 +129,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sql = 'insert into email (email,filname) values ({0},{1})'.format(i,99)</find>
-      <find>Db</find>
-      <find>parity</find>
-      <find>当前</find>
       <find>excelPathName</find>
       <find>except</find>
       <find>邮件</find>
@@ -152,7 +146,6 @@
       <find>connect</find>
       <find>getAllEmail</find>
       <find>conne</find>
-      <find>savePath</find>
       <find>data</find>
       <find>select</find>
       <find>gete</find>
@@ -161,6 +154,11 @@
       <find>regex</find>
       <find>while</find>
       <find>print</find>
+      <find>savePath</find>
+      <find>insertDb</find>
+      <find>selectDbTable</find>
+      <find>空数据</find>
+      <find>csv</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -174,7 +172,6 @@
         <option value="$PROJECT_DIR$/getEmailFromResult.py" />
         <option value="$PROJECT_DIR$/now.py" />
         <option value="$PROJECT_DIR$/getEmailToExcel.py" />
-        <option value="$PROJECT_DIR$/pyMysql.py" />
         <option value="$PROJECT_DIR$/getEmailAddressToDb.py" />
         <option value="$PROJECT_DIR$/cunEmailMany.py" />
         <option value="$PROJECT_DIR$/cutEmail.py" />
@@ -183,17 +180,23 @@
         <option value="$PROJECT_DIR$/readFromDb5.py" />
         <option value="$PROJECT_DIR$/getEmailToExcel1.py" />
         <option value="$PROJECT_DIR$/selectFromDb5.py" />
-        <option value="$PROJECT_DIR$/getEmailFromExcel4.py" />
         <option value="$PROJECT_DIR$/fromDbtoExcel.py" />
-        <option value="$PROJECT_DIR$/fromDbToDb5.py" />
         <option value="$PROJECT_DIR$/getEmailToDb2.py" />
         <option value="$PROJECT_DIR$/getEmailFromResult3.py" />
-        <option value="$PROJECT_DIR$/fromDbtoExcel6.py" />
         <option value="$PROJECT_DIR$/DbToopenpyxl.py" />
-        <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/demosCode.py" />
-        <option value="$PROJECT_DIR$/test0.py" />
+        <option value="$PROJECT_DIR$/getEmailFromExcel4.py" />
+        <option value="$PROJECT_DIR$/fromDbToDb5.py" />
+        <option value="$PROJECT_DIR$/fromDbtoExcel6.py" />
+        <option value="$PROJECT_DIR$/test1limit.py" />
+        <option value="$PROJECT_DIR$/pyMysql.py" />
+        <option value="$PROJECT_DIR$/deleteFromDb8.py" />
         <option value="$PROJECT_DIR$/DbToopenpyxl7.py" />
+        <option value="$PROJECT_DIR$/test0.py" />
+        <option value="$PROJECT_DIR$/testCSV.py" />
+        <option value="$PROJECT_DIR$/dbToCSV8.py" />
+        <option value="$PROJECT_DIR$/DbToExcel7.1.py" />
+        <option value="$PROJECT_DIR$/demosCode.py" />
+        <option value="$PROJECT_DIR$/test.py" />
       </list>
     </option>
   </component>
@@ -204,8 +207,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="56" />
-    <option name="y" value="247" />
+    <option name="x" value="348" />
+    <option name="y" value="18" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -224,6 +227,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -236,7 +240,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -257,8 +260,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.DbToopenpyxl7">
-    <configuration name="DbToopenpyxl7" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.test">
+    <configuration name="DbToExcel7.1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -271,12 +274,12 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="getMailAddress" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DbToopenpyxl7.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DbToExcel7.1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="fromDbtoExcel6" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="dbToCSV8" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -289,25 +292,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="getMailAddress" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fromDbtoExcel6.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <configuration name="getEmailFromResult3" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="getMailAddress" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/getEmailFromResult3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dbToCSV8.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -348,20 +333,38 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
+    <configuration name="testCSV" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="getMailAddress" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testCSV.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.getEmailFromResult3" />
-      <item index="1" class="java.lang.String" itemvalue="Python.fromDbtoExcel6" />
-      <item index="2" class="java.lang.String" itemvalue="Python.test0" />
-      <item index="3" class="java.lang.String" itemvalue="Python.DbToopenpyxl7" />
+      <item index="0" class="java.lang.String" itemvalue="Python.DbToExcel7.1" />
+      <item index="1" class="java.lang.String" itemvalue="Python.test0" />
+      <item index="2" class="java.lang.String" itemvalue="Python.testCSV" />
+      <item index="3" class="java.lang.String" itemvalue="Python.dbToCSV8" />
       <item index="4" class="java.lang.String" itemvalue="Python.test" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.DbToopenpyxl7" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test0" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test" />
-        <item index="3" class="java.lang.String" itemvalue="Python.fromDbtoExcel6" />
-        <item index="4" class="java.lang.String" itemvalue="Python.getEmailFromResult3" />
+        <item index="0" class="java.lang.String" itemvalue="Python.test" />
+        <item index="1" class="java.lang.String" itemvalue="Python.dbToCSV8" />
+        <item index="2" class="java.lang.String" itemvalue="Python.testCSV" />
+        <item index="3" class="java.lang.String" itemvalue="Python.DbToExcel7.1" />
+        <item index="4" class="java.lang.String" itemvalue="Python.test0" />
       </list>
     </recent_temporary>
   </component>
@@ -380,18 +383,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14658849" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15511727" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3771739" sideWeight="0.5063966" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24021739" sideWeight="0.5063966" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36413044" sideWeight="0.4936034" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.275" sideWeight="0.4936034" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -417,18 +421,122 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="11" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/fromDbToDb5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="55" column="11" lean-forward="false" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="11" />
+          <folding>
+            <element signature="e#39#54#0" expanded="true" />
+            <element signature="e#116#527#0" expanded="false" />
+            <element signature="e#562#722#0" expanded="false" />
+            <element signature="e#755#1158#0" expanded="false" />
+            <marker date="1510561709629" expanded="true" signature="290:324" ph="SELECT EMAIL... EMAILFROMSIMON2" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DbToExcel7.1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1917">
+          <caret line="76" column="32" lean-forward="true" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="32" />
+          <folding>
+            <element signature="e#54#65#0" expanded="true" />
+            <element signature="e#1492#1705#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getEmailFromExcel4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2916">
+          <caret line="113" column="12" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="121" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DbToopenpyxl7.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1269">
+          <caret line="60" column="30" lean-forward="true" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyMysql.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deleteFromDb8.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1458">
+          <caret line="105" column="29" lean-forward="true" selection-start-line="105" selection-start-column="29" selection-end-line="105" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getEmailFromResult3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2592">
+          <caret line="100" column="30" lean-forward="true" selection-start-line="100" selection-start-column="30" selection-end-line="100" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test0.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1539">
+          <caret line="57" column="4" lean-forward="false" selection-start-line="57" selection-start-column="4" selection-end-line="63" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#59#255#0" expanded="false" />
+            <element signature="e#305#882#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fromDbToDb5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="55" column="11" lean-forward="true" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="11" />
+          <folding>
+            <element signature="e#39#54#0" expanded="true" />
+            <element signature="e#116#527#0" expanded="false" />
+            <element signature="e#562#722#0" expanded="false" />
+            <element signature="e#755#1158#0" expanded="false" />
+            <marker date="1510561709629" expanded="true" signature="290:324" ph="SELECT EMAIL... EMAILFROMSIMON2" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DbToExcel7.1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+          <folding>
+            <element signature="e#54#65#0" expanded="true" />
+            <element signature="e#1492#1705#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/getEmailFromExcel4.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#89#98#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -444,13 +552,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#68#77#0" expanded="true" />
-            <element signature="e#3479#4030#0" expanded="false" />
-            <element signature="e#4075#4911#0" expanded="false" />
-            <element signature="e#5527#6173#0" expanded="false" />
-            <element signature="e#6225#6441#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -473,10 +574,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2133">
           <caret line="80" column="41" lean-forward="false" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
-          <folding>
-            <element signature="e#701#1203#0" expanded="false" />
-            <element signature="e#2867#3703#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -484,12 +581,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3456">
           <caret line="132" column="103" lean-forward="true" selection-start-line="132" selection-start-column="4" selection-end-line="132" selection-end-column="103" />
-          <folding>
-            <element signature="e#57#66#0" expanded="false" />
-            <element signature="e#3787#4338#0" expanded="false" />
-            <element signature="e#4375#4864#0" expanded="false" />
-            <element signature="e#5324#5540#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -497,13 +588,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#68#77#0" expanded="true" />
-            <element signature="e#3479#4030#0" expanded="false" />
-            <element signature="e#4075#4911#0" expanded="false" />
-            <element signature="e#5527#6173#0" expanded="false" />
-            <element signature="e#6225#6441#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -519,10 +603,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2133">
           <caret line="80" column="41" lean-forward="false" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
-          <folding>
-            <element signature="e#701#1203#0" expanded="false" />
-            <element signature="e#2867#3703#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -530,13 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#68#77#0" expanded="true" />
-            <element signature="e#3479#4030#0" expanded="false" />
-            <element signature="e#4075#4911#0" expanded="false" />
-            <element signature="e#5527#6173#0" expanded="false" />
-            <element signature="e#6225#6441#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -560,10 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2133">
           <caret line="80" column="41" lean-forward="false" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
-          <folding>
-            <element signature="e#701#1203#0" expanded="false" />
-            <element signature="e#2867#3703#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -580,7 +649,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="165" column="0" lean-forward="false" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -588,12 +656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
           <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="e#76#85#0" expanded="true" />
-            <marker date="1510297897802" expanded="true" signature="1681:1737" ph="INSERT into emailonly" />
-            <marker date="1510297897802" expanded="true" signature="2069:2101" ph="SELECT EMAIL... EMAILFROMSIMON" />
-            <marker date="1510297897802" expanded="true" signature="2075:2092" ph="select email... emailonly" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -601,25 +663,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
           <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cutEmail.py" />
-    <entry file="file://$PROJECT_DIR$/basics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyMysql.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/copyFile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -631,52 +678,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
           <caret line="166" column="0" lean-forward="false" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fromDbToDb5.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="57" column="23" lean-forward="false" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
-          <folding>
-            <element signature="e#39#54#0" expanded="true" />
-            <element signature="e#116#527#0" expanded="false" />
-            <element signature="e#562#722#0" expanded="false" />
-            <element signature="e#755#1158#0" expanded="false" />
-            <marker date="1510296167491" expanded="true" signature="290:324" ph="SELECT EMAIL... EMAILFROMSIMON2" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getEmailFromExcel4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="117" column="43" lean-forward="false" selection-start-line="117" selection-start-column="43" selection-end-line="117" selection-end-column="43" />
-          <folding>
-            <element signature="e#89#98#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getEmailFromResult3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-          <folding>
-            <element signature="e#76#85#0" expanded="true" />
-            <marker date="1510297897802" expanded="true" signature="1681:1737" ph="INSERT into emailonly" />
-            <marker date="1510297897802" expanded="true" signature="2069:2101" ph="SELECT EMAIL... EMAILFROMSIMON" />
-            <marker date="1510297897802" expanded="true" signature="2075:2092" ph="select email... emailonly" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -684,25 +685,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
           <caret line="176" column="14" lean-forward="false" selection-start-line="157" selection-start-column="0" selection-end-line="183" selection-end-column="25" />
-          <folding>
-            <element signature="e#68#77#0" expanded="true" />
-            <element signature="e#3479#4030#0" expanded="false" />
-            <element signature="e#4075#4911#0" expanded="false" />
-            <element signature="e#5527#6173#0" expanded="false" />
-            <element signature="e#6225#6441#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fromDbtoExcel6.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1399">
-          <caret line="71" column="11" lean-forward="true" selection-start-line="71" selection-start-column="11" selection-end-line="71" selection-end-column="11" />
-          <folding>
-            <element signature="e#33#44#0" expanded="true" />
-            <element signature="e#132#543#0" expanded="false" />
-            <element signature="e#578#738#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -710,40 +692,135 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="284">
           <caret line="136" column="9" lean-forward="false" selection-start-line="136" selection-start-column="9" selection-end-line="136" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test1limit.py" />
+    <entry file="file://$PROJECT_DIR$/getEmailFromResult3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2592">
+          <caret line="100" column="30" lean-forward="false" selection-start-line="100" selection-start-column="30" selection-end-line="100" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyMysql.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deleteFromDb8.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="19" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fromDbtoExcel6.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DbToopenpyxl7.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="81" column="48" lean-forward="false" selection-start-line="81" selection-start-column="48" selection-end-line="81" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="5" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/pandas/io/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="488" column="0" lean-forward="false" selection-start-line="488" selection-start-column="0" selection-end-line="488" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fromDbToDb5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding>
-            <element signature="e#3787#4338#0" expanded="false" />
-            <element signature="e#5324#5540#0" expanded="false" />
+            <element signature="e#39#54#0" expanded="true" />
+            <element signature="e#116#527#0" expanded="false" />
+            <element signature="e#562#722#0" expanded="false" />
+            <element signature="e#755#1158#0" expanded="false" />
+            <marker date="1510561709629" expanded="true" signature="290:324" ph="SELECT EMAIL... EMAILFROMSIMON2" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbToCSV8.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="662">
+          <caret line="30" column="24" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="86" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getEmailFromExcel4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="75" column="17" lean-forward="true" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testCSV.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DbToExcel7.1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="68" selection-end-column="84" />
+          <folding>
+            <element signature="e#54#65#0" expanded="true" />
+            <element signature="e#1492#1705#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demosCode.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="198" column="13" lean-forward="false" selection-start-line="198" selection-start-column="13" selection-end-line="198" selection-end-column="13" />
-          <folding>
-            <element signature="e#701#1203#0" expanded="false" />
-            <element signature="e#2867#3703#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="-140">
+          <caret line="228" column="12" lean-forward="true" selection-start-line="228" selection-start-column="12" selection-end-line="228" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test0.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="26" />
-          <folding />
+        <state relative-caret-position="189">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#59#255#0" expanded="false" />
+            <element signature="e#305#882#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DbToopenpyxl7.py">
+    <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="49" column="14" lean-forward="true" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
-          <folding>
-            <element signature="e#33#44#0" expanded="true" />
-            <element signature="e#162#573#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="270">
+          <caret line="10" column="104" lean-forward="true" selection-start-line="10" selection-start-column="104" selection-end-line="10" selection-end-column="104" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -1,8 +1,5 @@
 """
-第四个版本
-遍历源路径读取写入数据库,按列匹配邮箱地址
-非读取错误文件和特殊形式获取全部邮箱地址
-executemany()N倍速度于单行单数据插入mysql
+从excel读取数据,删除对应库中数据
 """
 
 import os
@@ -28,8 +25,8 @@ def execute(regexXls,regexCsv,sourcePath):
                 print('当前文件', fullFileName)
                 data = getEmailFromCsv(fullFileName)
             if data:
-                # 写入数据库
-                insertDb(data)
+                    # 删除对应数据
+                    delDb(data)
 
 #获取xls/xlsx数据
 def getEmailFromXls(xlsFile):
@@ -86,29 +83,31 @@ def getEmails(arg):
             emailList.append(i[0])
     return (emailList)
 
-#写入数据库
-def insertDb(data):
-    global insertCount,dbTable
+
+#数据库删除数据
+def delDb(data):
+    global dbTable
     db = pymysql.connect(host='localhost', port=3306, user='root', passwd='', db='db3', charset='utf8')
     cursor = db.cursor()
-    insertCount += 1
     # print('data',data.__len__())
     try:
-        # sql = "INSERT IGNORE INTO EMAILFROMSIMON (EMAIL) VALUES ( %s )"
-        sql = "INSERT IGNORE INTO " + dbTable + " (EMAIL) VALUES ( %s )"
-        cursor.executemany(sql,tuple(data))
-        # 提交到数据库执行
-        db.commit()
+        for i in data:
+            print(i)
+            # sql = "DELETE FROM " + dbTable + " WHERE EMAIL = '{}'".format('zhaozhh@cgnpc.com.cn')
+            sql = 'DELETE FROM  EMAILTEST WHERE EMAIL = "{0}" '.format(i)
+            # sql = "select * from " + dbTable + " where email = '{}'".format('zhaozhh@cgnpc.com.cn')
+            # print(sql)
+            cursor.execute(sql)
+            db.commit()
     except Exception as  err:
-        print('写入错误',err)
+        print('删除错误',err)
     #关闭数据库
     db.close()
 
 if __name__ == "__main__":
-    #写入的数据表名
-    dbTable = " EMAILTEMP"
+    #待删除数据的表名
+    dbTable = " EMAILTEST"
     starttime = datetime.datetime.now()
-    insertCount = 0
     sourcePath = 'E:/pppwork/'
     # sourcePath = 'E:/pppsource/'
     #存错误信息文件
@@ -117,6 +116,5 @@ if __name__ == "__main__":
     regexCsv = '.+\.csv$'
     # 执行函数
     execute(regexXls, regexCsv, sourcePath)
-    print('写入次数', insertCount)
     endtime = datetime.datetime.now()
     print('运行时间:',endtime - starttime)

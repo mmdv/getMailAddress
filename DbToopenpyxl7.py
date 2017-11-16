@@ -1,5 +1,5 @@
 """
-取出数据库数据写入excel 48000条/表
+取出数据库数据写入excel 48000条/表  OPENPYXL
 """
 
 import xlwt
@@ -7,7 +7,7 @@ import datetime
 import pymysql
 import re
 import os
-from openpyxl import Workbook
+import openpyxl as xl
 
 #数据库查询全部邮箱
 def selectFromDb():
@@ -34,26 +34,35 @@ def getEmails(arg):
     #     email.remove('')
     return email[0]
 
-#写入excel
+#写入excel/
 def writeExcel(data,lines):#data可以不需要而直接写入excel提升效率?
-    print("写ru数据表被执行",data)
+    print("写ru数据表被执行",data. __len__())
     global writeCount,savePath
     excelNameCount =  fileCount(savePath) - 1#获取存储文件夹文件数
     print('获取到文件数',excelNameCount)
-    # 48000行数据换一张表
-    x = 0
-    wb = Workbook()
-    sheet = wb.active
-    sheet.title = "sheet1"
-    for i in range(data.__len__()):
-        sheet["A%d" % (x + 1)].value = data[i]
-        x += 1
-        if (i-1) % lines == 0 and i != 0:
-            writeCount += 1
-            wb.save(savePath + str(excelNameCount) + '.xlsx')
-            excelNameCount += 1
-            x = 0
 
+    wb = xl.Workbook()
+    ws = wb.active
+    ws.title = "sheet1"
+    x = 0
+    # 列写入方法2
+    for i in range(data.__len__()):
+        # 用 + 拼接不能使用
+        ws["A%d" % (x + 1)].value = data[i]
+        #写入列从0开始计数
+        x += 1
+
+        if i % lines == 0 and i != 0:#非第一次,不存空表
+            # 写入文件
+            wb.save(savePath + str(excelNameCount) + '.xlsx')
+            x = 0#重置0
+            writeCount += 1 #统计次数
+            excelNameCount += 1 #文件名次数+
+            wb = xl.Workbook()
+            ws = wb.active
+            ws.title = "sheet1"
+    #最后一次写入
+    wb.save('E:/pppresult/openpyxl/' + str(excelNameCount) + '.xlsx')
 # 获取写入目标文件夹的文件数,用于计数命名
 def fileCount(savePath):
     for parent, dirnames, filenames in os.walk(savePath):
@@ -66,11 +75,11 @@ if __name__ == "__main__":
     writeCount = 0
     starttime = datetime.datetime.now()
     #每表数据条数
-    lines = 100
+    lines = 480000
     #查表名
-    selectDbTable = " EMAILTEST"
+    selectDbTable = " EMAILM11D8"
     #存储路径
-    savePath = "E:/"
+    savePath = "E:/pppresult/openpyxl/emailm11d8"
     # 清洗结果
     results = []
     #获取邮件地址
@@ -82,7 +91,7 @@ if __name__ == "__main__":
                 results.append(getEmails(email[0]))
         except:
             print('空数据')
-    #写入excel
+
     writeExcel(results,lines)
     endtime = datetime.datetime.now()
     print('运行时间:', endtime - starttime)

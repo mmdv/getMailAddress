@@ -48,9 +48,9 @@ def insertDb(data):
 if __name__ == "__main__":
     starttime = datetime.datetime.now()
     #查表名
-    selectDbTable = " EMAILFROMSIMON"
+    selectDbTable = " EMAILM11D8"
     #写表名
-    insertDbTable = " EMAILFROMSIMON2"
+    insertDbTable = " EMAILTEMP"
     # 清洗结果
     results = []
     #获取邮件地址
