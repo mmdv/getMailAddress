@@ -106,7 +106,8 @@ def delDb(data):
 
 if __name__ == "__main__":
     #待删除数据的表名
-    dbTable = " EMAILTEST"
+    # dbTable = " EMAILTEST"
+    dbTable = " EMAILM11D8"
     starttime = datetime.datetime.now()
     sourcePath = 'E:/pppwork/'
     # sourcePath = 'E:/pppsource/'

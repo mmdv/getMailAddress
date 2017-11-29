@@ -76,11 +76,11 @@ if __name__ == "__main__":
     lines = 48000
     #查表名
     # selectDbTable = " EMAILFROMSIMON"
-    selectDbTable = " EMAILTEST"
+    selectDbTable = " EMAILM11D8"
     # selectDbTable = " EMAILM11D8"
     #存储路径
-    # savePath = "E:/pppresult/email/"
-    savePath = "E:/ppptest/"
+    savePath = "E:/pppresult/email/"
+    # savePath = "E:/ppptest/"
     #执行
     selectFromDb(lines,writeCsv)
     endtime = datetime.datetime.now()

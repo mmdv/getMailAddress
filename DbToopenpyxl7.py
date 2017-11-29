@@ -15,7 +15,7 @@ def selectFromDb():
     db = pymysql.connect(host='localhost', port=3306, user='root', passwd='', db='db3', charset='utf8')
     cursor = db.cursor()
     try:
-        sql = "SELECT EMAIL FROM" + selectDbTable
+        sql = "SELECT EMAIL FROM " + selectDbTable
         # 执行SQL语句
         cursor.execute(sql)
         # 获取所有记录列表
@@ -62,14 +62,14 @@ def writeExcel(data,lines):#data可以不需要而直接写入excel提升效率?
             ws = wb.active
             ws.title = "sheet1"
     #最后一次写入
-    wb.save('E:/pppresult/openpyxl/' + str(excelNameCount) + '.xlsx')
+    wb.save(savePath + str(excelNameCount) + '.xlsx')
 # 获取写入目标文件夹的文件数,用于计数命名
 def fileCount(savePath):
     for parent, dirnames, filenames in os.walk(savePath):
         # print('文件数..................', filenames.__len__())
         # 获取当前文件夹写文件数,继续数目新增命名.xls文件
-        fileCount = filenames.__len__()
-    return fileCount
+        fileTotal = filenames.__len__()
+    return fileTotal
 
 if __name__ == "__main__":
     writeCount = 0
@@ -77,13 +77,15 @@ if __name__ == "__main__":
     #每表数据条数
     lines = 480000
     #查表名
-    selectDbTable = " EMAILM11D8"
+    selectDbTable = " EMAILTEST"
     #存储路径
-    savePath = "E:/pppresult/openpyxl/emailm11d8"
+    # savePath = "E:/pppresult/openpyxl/email/"
+    savePath = "E:/pppresult/fromlg/"
     # 清洗结果
     results = []
     #获取邮件地址
     datas = selectFromDb()
+    print(datas)
     for email in datas:
         try:
             temp = getEmails(email[0])

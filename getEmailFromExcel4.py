@@ -106,7 +106,8 @@ def insertDb(data):
 
 if __name__ == "__main__":
     #写入的数据表名
-    dbTable = " EMAILTEMP"
+    # dbTable = " M11D8UNSUBSCRIBE"
+    dbTable = " EMAILM11D8"
     starttime = datetime.datetime.now()
     insertCount = 0
     sourcePath = 'E:/pppwork/'
